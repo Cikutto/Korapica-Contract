@@ -8,6 +8,11 @@ pragma solidity ^0.8.0;
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 
     
+// File: File: @openzeppelin/contracts/token/ERC721/IERC721.sol
+pragma solidity ^0.8.0;
+
+interface IERC721 is IERC165 {
     
+}
 }
 
