@@ -50,7 +50,16 @@ interface IERC721 is IERC165 {
     ) external;
 }
 
+//File: @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
 
+pragma solidity ^0.8.0;
+
+interface IERC721Enumerable is IERC721 {
+
+    function totalSupply() external view returns (uint256);
+
+    
+}
 
 
     
