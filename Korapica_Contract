@@ -63,6 +63,20 @@ interface IERC721Enumerable is IERC721 {
     function tokenByIndex(uint256 index) external view returns (uint256);
 }
 
+// File: @openzeppelin/contracts/utils/introspection/ERC165.sol
+pragma solidity ^0.8.0;
+
+abstract contract ERC165 is IERC165{
+
+    function supportsInterface(bytes4 interfaceId) public view virtual override return (bool) {
+        return interfaceId == type(IERC165).interfaceId;
+
+        
+    }
+
+
+}
+
 
 
     
