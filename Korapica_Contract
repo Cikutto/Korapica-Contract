@@ -204,6 +204,10 @@ library Address {
         (bool success, bytes memory returndata) = target.staticcall(data);
         return verifyCallResult(success, returndata, errorMessage);
     }
+
+    function functionDelegateCall(address target, bytes memory data) internal returns (bytes memory) {
+        return functionDelegateCall(target, data, "Address: low-level delegate call failed");
+    }
       
 }
 
