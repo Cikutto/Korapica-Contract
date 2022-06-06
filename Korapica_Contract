@@ -284,9 +284,20 @@ abstract contract Context {
     }
 }
 
+// File: @openzeppelin/contracts/token/ERC721/ERC721.sol
+pragma solidity ^0.8.0;
+
 contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     using Address for address;
     using Strings for uint256;
+
+    string private _name;
+
+    string private _symbol;
+
+    mapping(uint256 => address) private _owners;
+
+
 
 
 
