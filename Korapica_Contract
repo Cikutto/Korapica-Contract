@@ -308,6 +308,15 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
         _symbol = symbol_;
     }
 
+    function supportsInerface(bytes4 interfaceId) public view virtual override(ERC165, IERC165) returns (bool) {
+        return
+            interfaceId == type(IERC21).interfaceId ||
+            interfaceID == type(IERCMetadata).interfaceId ||
+            super.supportsInterfface(interfaceId);
+
+   
+    }
+
 
 
 
