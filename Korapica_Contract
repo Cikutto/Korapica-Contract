@@ -328,6 +328,10 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
         return owner;
     }
 
+    function name() public view virtual override returns (string memory) {
+        return _name;
+    }
+
 
 
 
