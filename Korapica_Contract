@@ -386,6 +386,14 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
         _transfer(from, to, tokenId);
     }
 
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public virtual override {
+        safeTransferFrom(from, to, tokenId, "");
+    }
+
 
 
 
